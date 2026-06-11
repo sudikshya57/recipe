@@ -1,0 +1,343 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body{
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgb(250, 230, 184);
+  
+}
+
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: auto;
+  color: white;
+  text-align: center;
+  padding: 350px 0;
+  overflow: hidden; /* To make sure the pseudo-element does not overflow */
+}
+
+/* Pseudo-element for the blurred background */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(https://images.pexels.com/photos/5677727/pexels-photo-5677727.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  filter: blur(4px); /* Apply blur effect */
+  z-index: -1; /* Place the pseudo-element behind the content */
+}
+
+.hero h2{
+  font-size: 36px;
+  margin-top: 10px;
+}
+.search-box{
+  max-width: 550px;
+  margin: 15px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.search-box input{
+  width: 70%;
+  padding: 10px;
+  outline: none;
+  border: 0;
+  border-radius: 5px 0 0 5px;
+  font-size: 1rem;
+  border: 1px solid rgb(250, 230, 184);
+}
+.search-box button{
+  padding: 10px 20px;
+  outline: none;
+  border: 0;
+  border-radius: 0 5px 5px 0;
+  font-size: 1rem;
+  color: brown;
+  background-color: rgb(250, 230, 184);
+  cursor: pointer;
+}
+.search-box button:hover{
+  color: rgb(250, 230, 184);
+  background-color: brown;
+}
+.search-box button:active{
+  opacity: 0.5;
+}
+
+#meal{
+  margin: 2.4rem 0;
+}
+.meal-item{
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.79);
+  margin: 2rem 0;
+}
+.meal-img img{
+  display: block;
+  width: 100%;
+  
+}
+.meal-name{
+  padding: 1.5rem 0.5rem;
+}
+.meal-name h3{
+  font-size: 1.4rem;
+}
+.recipe-btn{
+  text-decoration: solid;
+  display: flex;
+  color: rgba(255, 234, 215, 0.897);
+  background-color: rgb(238, 119, 64);
+  border-color: rgb(238, 119, 64);
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 0.75rem 0;
+  display: block;
+  width:  115px;
+  margin: 1rem ;
+  border-radius: 2rem;
+  transition: all 0.4s linear;
+}
+.recipe-btn:hover{
+  cursor: pointer;
+  background-color: rgba(255, 234, 215, 0.897);
+  border-color: rgba(255, 234, 215, 0.897);
+  color: rgb(238, 119, 64);
+}
+
+.meal-details{
+ position: fixed;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ -webkit-transform: translate(-50%, -50%);
+ -moz-transform: translate(-50%, -50%);
+ -ms-transform: translate(-50%, -50%);
+ -o-transform: translate(-50%, -50%);
+ color: rgba(255, 234, 215, 0.897);
+ background: rgb(238, 119, 64);
+ border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    width: 90%; 
+    height: 90%;
+    overflow-y: scroll;
+    display: none;
+    padding: 2rem 0;
+
+}
+
+.meal-details::-webkit-scrollbar{
+  width: 10px;
+}
+
+.meal-details::-webkit-scrollbar-thumb{
+  background: #f0f0f0;
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+}
+
+.showRecipe{
+  display: block;
+}
+
+.meal-details-content{
+  margin: 2rem;
+}
+.meal-details-content p:not(.recipe-category){
+  padding: 1rem 0;
+}
+
+
+.recipe-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: #333;
+  cursor: pointer;
+}
+
+.recipe-close-btn:hover {
+  color: #ff0000; /* Change color on hover */
+}
+
+
+.recipe-title{
+  letter-spacing: 1px;
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+}
+.recipe-category{
+  background: #fff;
+  font-weight: 600;
+  color: rgb(238, 119, 64);
+  display: flex;
+  justify-content: center;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3rem;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.recipe-instruct h3{
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+}
+.recipe-meal-img img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+}
+
+.loader {
+  font-size: 16px;
+  font-weight: bold;
+  color: #f7f4f4;
+}
+
+.showRecipe {
+  display: block;
+}
+
+.notFound{
+  grid-template-columns: 1fr!important;
+  color: rgb(250, 230, 184);
+  font-size: 1.8rem;
+  font-weight: 600;
+  width: 100%;
+}
+
+
+
+
+
+
+@media screen and (min-width: 400px){
+  .meal-search-box{
+      width: 440px;
+      margin-left: auto;
+      margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 568px){
+  #meal{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+  }
+  .meal-item{
+    margin: 0;
+}
+
+
+.meal-details{
+    width: 700px;
+}
+}
+
+@media screen and (min-width: 992px){
+#meal{
+    grid-template-columns: repeat(3, 1fr);
+}
+
+ 
+}
+
+
+
+/* General paragraph styling */
+p {
+  font-size: 24px; 
+  line-height: 1.6; 
+  color: #ffffff; 
+  margin: 10px 0; 
+  display: flex;
+  justify-content: center;
+}
+
+/* Recipe Title Styling */
+.recipe-title {
+  font-size: 24px; 
+  font-weight: bold; 
+  color: #ffffff; 
+  margin-bottom: 15px; 
+  text-transform: capitalize; 
+}
+
+/* Recipe Category Styling */
+.recipe-category {
+  font-size: 18px; /* Medium-sized font for the category */
+  font-style: italic; /* Italic for emphasis */
+  color: #ff5722; /* Orange color for vibrancy */
+  margin-bottom: 15px; /* Add spacing below the category */
+}
+
+/* Instruction Section Styling */
+.recipe-instruct h3 {
+  font-size: 20px; /* Larger font for the section heading */
+  font-weight: bold; /* Emphasize the heading */
+  margin-bottom: 10px; /* Space below the heading */
+  color: #ffffff; /* Deep blue for contrast */
+}
+
+.recipe-instruct p {
+  font-size: 16px; /* Standard font size for instructions */
+  color: #ffffff; /* Slightly lighter gray for less emphasis */
+}
+
+/* Ingredients List Styling */
+.recipe-ingredients h3 {
+  font-size: 20px; /* Larger font for the section heading */
+  font-weight: bold; /* Emphasize the heading */
+  margin-bottom: 10px; /* Space below the heading */
+  color: #fafafa; /* Deep blue for contrast */
+}
+
+.recipe-ingredients ul {
+  list-style-type: disc; /* Add bullet points for ingredients */
+  padding-left: 20px; /* Indent the list for better alignment */
+  font-size: 16px; /* Standard font size for list items */
+  color: #ffffff; /* Slightly lighter gray */
+}
+
+.recipe-ingredients ul li {
+  margin-bottom: 5px; /* Space between each list item */
+}
+
+

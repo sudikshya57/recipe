@@ -1,0 +1,85 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body{
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgb(250, 230, 184);
+  
+}
+
+
+
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: auto;
+  color: white;
+  text-align: center;
+  padding: 100px 0;
+  overflow: hidden; /* To make sure the pseudo-element does not overflow */
+}
+
+/* Pseudo-element for the blurred background */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(https://images.pexels.com/photos/5677727/pexels-photo-5677727.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  filter: blur(4px); /* Apply blur effect */
+  z-index: -1; /* Place the pseudo-element behind the content */
+}
+
+.about-us{
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  backdrop-filter: blur(5px);
+  background: rgba(0, 0, 0, 0.6);
+  padding: 30px 40px;
+  border-radius: 20px;
+  width: 700px;
+  margin: auto;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  margin-bottom: 60px;
+}
+.about-us h2{
+  margin-bottom: 32px;
+  font-size: 36px;
+}
+
+.contact-us{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 30vh;
+  margin-top: 20px;
+  backdrop-filter: blur(5px);
+  background: rgba(0, 0, 0, 0.6);
+  padding: 30px 40px;
+  border-radius: 20px;
+  width: 700px;
+  margin: auto;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+
+}
+.contact-us h2{
+  margin-bottom: 32px;
+  font-size: 26px;
+
+}

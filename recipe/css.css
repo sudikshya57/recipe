@@ -1,0 +1,101 @@
+/* Hide the checkbox input */
+.checkbox {
+  display: none;
+}
+
+/* Hamburger Icon Styles */
+.toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 1100; /* Ensure the hamburger is above other elements */
+}
+
+.common {
+  width: 30px;
+  height: 3px;
+  background-color: #d1a15f;  /* Light brown color for the hamburger icon */
+  border-radius: 5px;
+  transition: all 0.3s ease; /* Smooth transition for line animations */
+}
+
+/* Slide-in Menu */
+.slide {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #6f4f37;  /* Light brown background for the slide-in menu */
+  transition: 0.3s ease;
+  padding-top: 60px;
+  z-index: 1000; /* Ensure the slide menu is below the hamburger icon */
+}
+
+.slide h1 {
+  color: #f4f1eb;  /* Light cream color for the menu title */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.slide ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.slide li {
+  text-align: center;
+}
+
+.slide a {
+  display: block;
+  color: #f4f1eb;  /* Light cream color for the links */
+  padding: 15px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.slide a:hover {
+  background-color: #8b6f46;  /* Slightly darker brown for hover effect */
+}
+
+/* Toggle Menu when Checkbox is Checked */
+.checkbox:checked + .toggle + .slide {
+  left: 0;
+}
+
+/* Close the middle line when checked */
+.checkbox:checked + .toggle .middle_line {
+  opacity: 0;
+}
+
+/* Rotate top and bottom lines when checked */
+.checkbox:checked + .toggle .top_line {
+  transform: rotate(45deg);
+  position: relative;
+  top: 8px;
+}
+
+.checkbox:checked + .toggle .bottom_line {
+  transform: rotate(-45deg);
+  position: relative;
+  top: -8px;
+}
+
+/* Simple Button Styling */
+button {
+  background: none;
+  border: none;
+}
+
+button a {
+  color: #6f4f37;  /* Light brown color for links in buttons */
+  text-decoration: none;
+}
+
+button a:hover {
+  color: #d1a15f;  /* Light brown color on hover */
+}

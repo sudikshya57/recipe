@@ -1,0 +1,40 @@
+/* Rating Stars */
+.stars {
+  display: flex;
+  justify-content: start;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.star {
+  font-size: 30px;
+  color: #ccc; /* Default gray color */
+}
+
+.star.selected {
+  color: #ff8c00; /* Orange color for selected stars */
+}
+
+.submit-rating {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.submit-rating:hover {
+  background-color: #218838;
+}
+
+.average-rating {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Add hover effect to the stars */
+.star:hover {
+  color: #ff8c00;
+}

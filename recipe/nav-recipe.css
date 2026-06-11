@@ -1,0 +1,82 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;  /* Adjust the background color if necessary */
+  z-index: 1000;  /* Ensures the navbar stays on top of other elements */
+}
+
+
+
+body{
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgb(250, 230, 184);
+  margin-top: 60px;
+}
+
+header{
+  height: 100px;
+  width: 100%;
+  background: rgb(250, 230, 184);
+  color:  rgba(160, 73, 36, 0.903);
+  display: fixed;
+  align-items: center;
+  padding-right: 16px;
+  
+  
+}
+.container{
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+.logo{
+  width: 100px;
+  height: 84px;
+}
+
+.navbar-contents{
+  display: flex;
+  gap: 24px;
+}
+
+.contents-text:hover{
+  cursor: pointer;
+  text-shadow: 0px 1px 2px rgb(68, 68, 68);
+}
+
+
+.contents-text{
+  font-size: 20px;
+  color: rgba(160, 73, 36, 0.903);
+  text-decoration: none;
+  
+}
+
+
+
+.navbar-logo{
+  font-size: 26px;
+  margin-top: -15px;
+  display: flex;
+}
+
+.navbar-logo h2 {
+  font-family: cursive;
+  font-weight: 600; 
+  text-transform: uppercase; 
+  letter-spacing: 1.5px;
+  margin-left: 10px; 
+  display: inline-block; 
+}
